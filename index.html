@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartPOS</title>
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="app-shell">
+        <aside class="sidebar">
+          <div class="sidebar__top">
+            <div class="sidebar__logo">
+              <img
+                src="assets/logo.svg"
+                alt="SmartPOS"
+                class="sidebar__logo-icon-inner"
+              />
+              <div class="sidebar__logo-text">
+                <span class="sidebar__logo-primary">Smart</span>
+                <span class="sidebar__logo-accent">POS</span>
+              </div>
+            </div>
+
+            <nav class="sidebar__nav" aria-label="Główne menu">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >dashboard</span
+                    >
+                    <span class="nav-link__text">Dashboard</span>
+                  </button>
+                </li>
+                <li class="nav-item nav-item--active">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >restaurant</span
+                    >
+                    <span class="nav-link__text">Food &amp; Drinks</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >mail</span
+                    >
+                    <span class="nav-link__text">Messages</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >receipt_long</span
+                    >
+                    <span class="nav-link__text">Bills</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >settings</span
+                    >
+                    <span class="nav-link__text">Settings</span>
+                  </button>
+                </li>
+              </ul>
+
+              <p class="sidebar__section-label">Other</p>
+
+              <ul class="nav-list nav-list--secondary">
+                <li class="nav-item">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >notifications</span
+                    >
+                    <span class="nav-link__text">Notifications</span>
+                    <span class="nav-link__badge">3</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" type="button">
+                    <span
+                      class="material-icons nav-link__icon"
+                      aria-hidden="true"
+                      >support_agent</span
+                    >
+                    <span class="nav-link__text">Support</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="sidebar__bottom">
+            <article class="user-card">
+              <img
+                src="assets/profil.webp"
+                alt="Profil pracownika"
+                class="user-card__avatar"
+              />
+              <div class="user-card__info">
+                <h2 class="user-card__name">Mateusz Kozłowski</h2>
+                <p class="user-card__role">Kasjer • 4h 56m</p>
+                <button class="user-card__button" type="button">
+                  Open profile
+                </button>
+              </div>
+            </article>
+
+            <p class="sidebar__copyright">© 2020 SmartPOS App</p>
+          </div>
+        </aside>
+
+        <main class="content">
+          <header class="content-header">
+            <div class="content-header__left">
+              <button class="back-button" type="button" aria-label="Wróć">
+                <span class="material-icons" aria-hidden="true"
+                  >arrow_back</span
+                >
+              </button>
+
+              <nav class="breadcrumb" aria-label="Okruszki nawigacyjne">
+                <a href="#" class="breadcrumb__link">Food &amp; Drinks</a>
+                <span class="breadcrumb__separator">›</span>
+                <span class="breadcrumb__current">Burgers</span>
+              </nav>
+            </div>
+
+            <form class="search-bar" role="search">
+              <span class="material-icons search-bar__icon" aria-hidden="true"
+                >search</span
+              >
+              <input
+                id="search-input"
+                class="search-bar__input"
+                type="search"
+                placeholder="Search..."
+              />
+            </form>
+          </header>
+
+          <section class="content-title">
+            <h1 class="content-title__heading">Burgers</h1>
+            <span class="content-title__emoji" aria-hidden="true">🍔</span>
+          </section>
+
+          <section class="product-grid" aria-label="Lista burgerów">
+            <article class="product-card">
+              <button class="product-card__favorite" type="button">
+                <span class="material-icons">favorite_border</span>
+              </button>
+              <div class="product-card__image-wrapper">
+                <img
+                  src="assets/burger-cheeseburger.webp"
+                  alt="Cheeseburger"
+                  class="product-card__image"
+                />
+              </div>
+              <h2 class="product-card__name">Cheeseburger</h2>
+              <p class="product-card__weight">150 g</p>
+              <p class="product-card__price">$3.50</p>
+            </article>
+
+            <article class="product-card">
+              <button class="product-card__favorite" type="button">
+                <span class="material-icons">favorite_border</span>
+              </button>
+              <div class="product-card__image-wrapper">
+                <img
+                  src="assets/burger-deluxe.avif"
+                  alt="Chicken-Deluxe"
+                  class="product-card__image"
+                />
+              </div>
+              <h2 class="product-card__name">Chicken-Deluxe</h2>
+              <p class="product-card__weight">240 g</p>
+              <p class="product-card__price">$4.25</p>
+            </article>
+
+            <article class="product-card">
+              <button class="product-card__favorite" type="button">
+                <span class="material-icons">favorite_border</span>
+              </button>
+              <div class="product-card__image-wrapper">
+                <img
+                  src="assets/burger-hamburger.png"
+                  alt="Hamburger"
+                  class="product-card__image"
+                />
+              </div>
+              <h2 class="product-card__name">Hamburger</h2>
+              <p class="product-card__weight">320 g</p>
+              <p class="product-card__price">$4.50</p>
+            </article>
+
+            <article class="product-card">
+              <button class="product-card__favorite" type="button">
+                <span class="material-icons">favorite_border</span>
+              </button>
+              <div class="product-card__image-wrapper">
+                <img
+                  src="assets/burger-johnny.jpg"
+                  alt="Big John"
+                  class="product-card__image"
+                />
+              </div>
+              <h2 class="product-card__name">Big John</h2>
+              <p class="product-card__weight">650 g</p>
+              <p class="product-card__price">$5.20</p>
+            </article>
+
+            <article class="product-card">
+              <button class="product-card__favorite" type="button">
+                <span class="material-icons">favorite_border</span>
+              </button>
+              <div class="product-card__image-wrapper">
+                <img
+                  src="assets/burger-spicy-chicken.png"
+                  alt="Spicy Chicken"
+                  class="product-card__image"
+                />
+              </div>
+              <h2 class="product-card__name">Spicy Chicken</h2>
+              <p class="product-card__weight">340 g</p>
+              <p class="product-card__price">$4.75</p>
+            </article>
+
+            <article class="product-card">
+              <button class="product-card__favorite" type="button">
+                <span class="material-icons">favorite_border</span>
+              </button>
+              <div class="product-card__image-wrapper">
+                <img
+                  src="assets/burger-superstar.webp"
+                  alt="Superstars"
+                  class="product-card__image"
+                />
+              </div>
+              <h2 class="product-card__name">Superstars</h2>
+              <p class="product-card__weight">250 g</p>
+              <p class="product-card__price">$4.10</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
